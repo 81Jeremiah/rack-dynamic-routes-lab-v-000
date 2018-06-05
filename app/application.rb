@@ -9,7 +9,7 @@ class Application
     item = req.path.split("/items/").last
     item_from_cart = @@items.find{|i|i.name == item}
 
-        binding.pry
+        #binding.pry
         resp.write item_from_cart.price
       #end
   else
