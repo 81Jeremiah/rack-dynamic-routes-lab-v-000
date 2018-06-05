@@ -12,7 +12,7 @@ class Application
       item_from_cart = @@items.find{|i|i.name == item}
       resp.write item_from_cart.price
     else
-    resp.write "Item not there"
+    resp.write "Item not found"
     resp.status = 400
     end
   else
