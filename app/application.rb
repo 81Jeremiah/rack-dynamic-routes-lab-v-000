@@ -11,7 +11,7 @@ class Application
 
         binding.pry
         resp.write item_from_cart.price
-      end
+      #end
   else
     resp.write "Route not found"
     resp.status = 404
