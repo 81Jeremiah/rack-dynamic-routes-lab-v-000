@@ -7,6 +7,7 @@ class Application
   if req.path.match(/items/)
     item = req.path.split("/items/").last
       if @@items.collect{|item_from_cart|item_from_cart.name}.include?(item)
+        binding.pry
         found_item = @@items.find{|item|item.name == item}
         resp.write found_item.price
       end
